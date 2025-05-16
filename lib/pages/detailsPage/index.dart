@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sicc/widgets/customRecord/index.dart';
 
 class DetailsPage extends StatefulWidget {
   const DetailsPage({super.key});
@@ -12,11 +13,15 @@ class _DetailsPageState extends State<DetailsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Padding(
-          padding: EdgeInsets.all(10),
-          child: Text(
-            'Details Page',
-            style: TextStyle(fontSize: 24)),
+        child: CustomRecord(
+          'assets/images/perfilimage.png',
+          'João Pereira',
+          'Garfo', '12/07/1990',
+          'Maria Pereira Souza',
+          'Rua: Armando Joaquim - Centro',
+          'Grau 1',
+          'O registrado começa a sua atividade de venda por volta de 23hrs. Ele também tem táticas para enganar a polícia, pois fica desfarçado de comerciante de venda de cocadas.',
+          true
         ),
       ),
     );

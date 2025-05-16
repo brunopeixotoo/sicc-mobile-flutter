@@ -46,8 +46,8 @@ class CustomTile extends StatelessWidget {
                   padding: EdgeInsets.only(top: 15, bottom: 5, left: 10),
                   child: Image.asset(
                     image,
-                    width: 50,
-                    height: 50,
+                    width: 70,
+                    height: 70,
                     fit: BoxFit.contain,
                   ),
                 ),

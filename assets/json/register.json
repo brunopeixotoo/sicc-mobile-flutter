@@ -2,55 +2,55 @@
   {
     "id": 1,
     "name": "Ana Paula Souza",
-    "img": "assets/images/pmrr.gif",
+    "img": "assets/images/perfilimage.png",
     "status": "Grau 1"
   },
   {
     "id": 2,
     "name": "Carlos Eduardo Lima",
-    "img": "assets/images/pmrr.gif",
+    "img": "assets/images/perfilimage.png",
     "status": "Grau 3"
   },
   {
     "id": 3,
     "name": "Fernanda Oliveira",
-    "img": "assets/images/pmrr.gif",
+    "img": "assets/images/perfilimage.png",
     "status": "Grau 1"
   },
   {
     "id": 4,
     "name": "Lucas Martins",
-    "img": "assets/images/pmrr.gif",
+    "img": "assets/images/perfilimage.png",
     "status": "Grau 2"
   },
   {
     "id": 5,
     "name": "Mariana Silva",
-    "img": "assets/images/pmrr.gif",
+    "img": "assets/images/perfilimage.png",
     "status": "Grau 3"
   },
   {
     "id": 6,
     "name": "Rafael Costa",
-    "img": "assets/images/pmrr.gif",
+    "img": "assets/images/perfilimage.png",
     "status": "Grau 2"
   },
   {
     "id": 7,
     "name": "Juliana Mendes",
-    "img": "assets/images/pmrr.gif",
+    "img": "assets/images/perfilimage.png",
     "status": "Grau 2"
   },
   {
     "id": 8,
     "name": "Bruno Almeida",
-    "img": "assets/images/pmrr.gif",
+    "img": "assets/images/perfilimage.png",
     "status": "Grau 3"
   },
   {
     "id": 9,
     "name": "Patrícia Ramos",
-    "img": "assets/images/pmrr.gif",
+    "img": "assets/images/perfilimage.png",
     "status": "Grau 1"
   }
 ]
