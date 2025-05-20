@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:sicc/models/pagehome/index.dart';
+import 'package:sicc/modules/home/model/item.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  final PageController pageController;
+  const HomePage({required this.pageController, super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -52,34 +53,40 @@ class _HomePageState extends State<HomePage> {
           padding: EdgeInsets.all(10),
           child: SizedBox(
             width: 400,
-            child: Card(
-              elevation: 8,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
-              color: Colors.white,
-              child: Column(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(top: 15, bottom: 5),
-                    child: Image.asset(
-                      item.img,
-                      width: 100, // opcional
-                      height: 100, // opcional
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(bottom: 10),
-                    child: Text(
-                      item.name,
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
+            child: InkWell(
+              borderRadius: BorderRadius.circular(10),
+              onTap: () {
+                widget.pageController.jumpToPage(1);
+              },
+              child: Card(
+                elevation: 8,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                color: Colors.white,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(top: 15, bottom: 5),
+                      child: Image.asset(
+                        item.img,
+                        width: 100,
+                        height: 100,
+                        fit: BoxFit.contain,
                       ),
                     ),
-                  ),
-                ],
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 10),
+                      child: Text(
+                        item.name,
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -95,7 +102,7 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top:20, bottom: 20, left: 10, right: 10),
+            padding: const EdgeInsets.only(top: 20, bottom: 20, left: 10, right: 10),
             child: TextField(
               controller: _searchController,
               decoration: InputDecoration(
@@ -108,12 +115,9 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          Expanded(
-            child: _buildCards(),
-          ),
+          Expanded(child: _buildCards()),
         ],
       ),
     );
   }
-
 }

@@ -1,11 +1,12 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:sicc/widgets/customTile/index.dart';
-import 'package:sicc/models/listPage/index.dart';
+import 'package:sicc/modules/list/widgets/list.dart';
+import 'package:sicc/modules/list/model/index.dart';
 
 class ListPage extends StatefulWidget {
-  const ListPage({super.key});
+  final PageController pageController;
+  const ListPage({required this.pageController, super.key});
 
   @override
   State<ListPage> createState() => _ListPageState();
@@ -51,7 +52,12 @@ class _ListPageState extends State<ListPage> {
         itemCount: _filteredItems.length,
         itemBuilder: (context, index) {
           final reg = _filteredItems[index];
-          return CustomTile(reg.img, reg.name, reg.status);
+          return InkWell(
+            onTap: () {
+              widget.pageController.jumpToPage(2);
+            },
+            child: CustomTile(reg.img, reg.name, reg.status),
+          );
         },
       ),
     );

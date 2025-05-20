@@ -61,10 +61,12 @@ class CustomRecord extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).pushReplacementNamed('/home');
+                          },
                           style: TextButton.styleFrom(
                             backgroundColor: Colors.green,
-                            fixedSize: Size(200, 50),
+                            fixedSize: Size(double.infinity, 50),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
                             ),
@@ -83,14 +85,24 @@ class CustomRecord extends StatelessWidget {
                     : Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.cancel, color: Colors.red, size: 22),
-                        SizedBox(width: 8),
-                        Text(
-                          'Apagar',
-                          style: TextStyle(
-                            color: Colors.red,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
+                        TextButton(
+                          onPressed: () {
+                            Navigator.of(context).pushReplacementNamed('/home');
+                          },
+                          style: TextButton.styleFrom(
+                            backgroundColor: Colors.green,
+                            fixedSize: Size(double.infinity, 50),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                          child: Text(
+                            'Finalizar registro',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ],

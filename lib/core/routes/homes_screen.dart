@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sicc/widgets/customDrawer/index.dart';
-import 'package:sicc/pages/homePage/index.dart';
-import 'package:sicc/pages/listPage/index.dart';
-import 'package:sicc/pages/detailsPage/index.dart';
+import 'package:sicc/modules/drawer/index.dart';
+import 'package:sicc/modules/home/index.dart';
+import 'package:sicc/modules/list/index.dart';
+import 'package:sicc/modules/details/index.dart';
 
 class HomeScreen extends StatelessWidget {
   final _pageController = PageController();
@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return PageView(
       controller: _pageController,
-      // physics: NeverScrollableScrollPhysics(),
+      physics: NeverScrollableScrollPhysics(),
       children: [
         Scaffold(
           appBar: AppBar(
@@ -28,8 +28,9 @@ class HomeScreen extends StatelessWidget {
             centerTitle: true,
           ),
           drawer: CustomDrawer(_pageController),
-          body: HomePage(),
+          body: HomePage(pageController: _pageController,),
         ),
+
         Scaffold(
           appBar: AppBar(
             backgroundColor: const Color.fromARGB(255, 20, 69, 155),
@@ -47,10 +48,11 @@ class HomeScreen extends StatelessWidget {
           drawer: CustomDrawer(_pageController),
           body: Column(
             children: [
-              Expanded(child: ListPage()),
+              Expanded(child: ListPage(pageController: _pageController)),
             ],
           ),
         ),
+
         Scaffold(
           appBar: AppBar(
             backgroundColor: const Color.fromARGB(255, 20, 69, 155),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sicc/widgets/customRecord/index.dart';
+import 'package:sicc/modules/details/widgets/details.dart';
 
 class DetailsPage extends StatefulWidget {
   const DetailsPage({super.key});

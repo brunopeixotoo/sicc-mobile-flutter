@@ -3,46 +3,46 @@
   {
     "id": 1,
     "name": "Roubo/Furto",
-    "img": "assets/images/pmrr.gif"
+    "img": "assets/images/furto.jpg"
   },
   {
     "id": 2,
     "name": "Homicídio",
-    "img": "assets/images/pmrr.gif"
+    "img": "assets/images/homicidio.jpg"
   },
   {
     "id": 3,
     "name": "Tráfico de Drogas",
-    "img": "assets/images/pmrr.gif"
+    "img": "assets/images/trafico.jpg"
   },
   {
     "id": 4,
     "name": "Violência contra mulher",
-    "img": "assets/images/pmrr.gif"
+    "img": "assets/images/womanviolence.webp"
   },
   {
     "id": 5,
     "name": "Envolvimento com facção",
-    "img": "assets/images/pmrr.gif"
+    "img": "assets/images/faccao.png"
   },
   {
     "id": 6,
     "name": "MP em aberto",
-    "img": "assets/images/pmrr.gif"
+    "img": "assets/images/lupa.jpg"
   },
   {
     "id": 7,
     "name": "Assédio",
-    "img": "assets/images/pmrr.gif"
+    "img": "assets/images/assedio.jpg"
   },
   {
     "id": 8,
     "name": "Fuga",
-    "img": "assets/images/pmrr.gif"
+    "img": "assets/images/fuga1.jpg"
   },
   {
     "id": 9,
     "name": "Pirataria",
-    "img": "assets/images/pmrr.gif"
+    "img": "assets/images/pirataria.png"
   }
 ]

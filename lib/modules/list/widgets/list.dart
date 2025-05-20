@@ -23,13 +23,12 @@ class CustomTile extends StatelessWidget {
             children: [
               SlidableAction(
                 onPressed: (context) {
-                  
+                  //Callback para quando concluir o registro
                 },
                 backgroundColor: Colors.green,
                 foregroundColor: Colors.white,
                 icon: Icons.check,
                 label: 'Concluir',
-                // Apenas border-radius na borda direita
                 borderRadius: BorderRadius.circular(5),
               ),
             ],
@@ -77,7 +76,7 @@ class CustomTile extends StatelessWidget {
                           decoration: BoxDecoration(
                             color: status == 'Grau 1'
                                 ? Colors.redAccent
-                                : Colors.orangeAccent,
+                                : const Color.fromARGB(255, 255, 159, 42),
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Text(
